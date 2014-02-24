@@ -1,0 +1,47 @@
+<form class="form" role="form">
+    
+    <div ng-hide="loading || sent">
+        <div class="form-group">
+            <label>Name</label>
+            <input name="name" type="text" class="form-control" placeholder="Your name" ng-value="data.name">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input name="email" type="email" class="form-control" placeholder="Email address" ng-value="data.email">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input name="phone" type="text" class="form-control" placeholder="Phone number" ng-value="data.phone">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Subject</label>
+            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" ng-value="data.subject">
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" class="form-control" placeholder="Write you message here..." style="height:100px;" ng-value="data.message"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div id="recaptchaDiv{{ key }}"></div>
+            
+        </div>
+
+        <span class="label label-danger" ng-show="error">{{ error }}</span>
+
+        <button ng-if="!contactsubmitted" ng-click="submitcontactform()" type="button" class="btn btn-two">Send message</button>
+    </div>
+    <div ng-show="loading">
+        sending contact form
+    </div>
+    <div ng-show="sent">
+        thank you! we will reply to your message promptly
+    </div>
+
+</form>

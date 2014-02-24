@@ -1,0 +1,13 @@
+{
+  "name": "ng-ravens",
+  "description": "Angular directive that renders a contact form with a ReCaptcha element.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "dependencies": {
+    
+  }
+}
